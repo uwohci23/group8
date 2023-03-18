@@ -35,9 +35,9 @@
         <div id="menu_title" class="popup">
             <img src="graphics/splash.jpg" onclick="javascript:showMenu('main')" />
         </div>
-
         <div id="menu_about" class="popup">
-            <h3>Super Charrio Kart<br />
+            <h3>
+                Super Charrio Kart<br />
                 2017 <a href="http://www.thatshaman.com" target="_blank">that_shaman</a>
             </h3>
             <p>
@@ -46,7 +46,7 @@
             </p>
             <p>
                 Build with <a href="http://www.threejs.org" target="_blank">three.js </a>&amp; <a href="https://www.howlerjs.com/"
-                    target="_blank">howler.js</a>
+                                                                                                  target="_blank">howler.js</a>
             </p>
             <img src="graphics/icons/cat.png" onclick="javascript:meow()" />
             <div class="menuButton" onclick="showMenu('main')">
@@ -54,11 +54,64 @@
             </div>
         </div>
 
+        <div id="menu_HTP" class="popup">
+            <h2>
+                How to Play
+            </h2>
+            <p>
+                Use WASD to control the Super Charrio Kart. Or Drag the steel wheel using the mose if you like!
+            </p>
+            <p>
+                Press C or click mouse 2 to accelerate.
+            </p>
+            <p>
+                Avoid hitting the <span class="green"> grey area </span> in the map, which hinders you from moving. <span class="yellow"> Yellow blocks </span> give you a boost!
+            </p>
+            <img src="graphics/icons/cat.png" onclick="javascript:meow()" />
+            <div class="menuButton" onclick="showMenu('main')">
+                &lt;-BACK
+            </div>
+        </div>
+
+        <div id="menu_tutor" class="popup">
+            <p>
+                Welcome to Tutorial!
+            </p>
+            <p>
+                Press C or click mouse 2 to change driving mode.
+            </p>
+            <p>
+                Keyboard Mode<br />
+                Press <span class="green"> WASD  </span> to move the kart<br />
+                Press <span class="green"> Q  </span> to use Nitrogen engine
+
+            </p>
+            <p>
+                Mouse Mode<br />
+                <span class="yellow"> Drag the steering wheel  </span> to move the kart<br />
+                Press <span class="yellow">middle mouse button </span>  to use Nitrogen engine
+            </p>
+            <div class="menuButton" onclick="tutorM()">
+                &gt;OK
+            </div>
+            <div class="menuButton" onclick="showMenu('main')">
+                &lt;-BACK
+            </div>
+        </div>
+
         <div id="menu_main" class="popup">
             <h2>SUPER CHARRIO KART</h2>
+            <div class="menuButton" onclick="javascript:showMenu('tutor')">
+                <img src="graphics/icons/kart.png" />
+                TUTORIAL MODE
+            </div>
             <div class="menuButton" onclick="javascript:showMenu('racer')">
                 <img src="graphics/icons/kart.png" />
-                SELECT YOUR KART
+                RACING MODE
+            </div>
+            <div class="menuButton" onclick="javascript:showMenu('HTP')">
+                <img src="graphics/icons/about.png" />
+                HOW TO PLAY
             </div>
             <div class="menuButton" onclick="javascript:showMenu('about')">
                 <img src="graphics/icons/about.png" />
@@ -107,7 +160,6 @@
                 &lt;- BACK
             </div>
         </div>
-
         <div id="menu_track" class="popup">
             <h2>SELECT A LOCATION</h2>
             <div class="menuButton secret" onclick="loadMap('inquest')">
@@ -130,13 +182,11 @@
                 <img src="graphics/icons/trackSouthsun.png" />
                 Southsun
             </div>
-
             <div class="menuButton" onclick="loadMap('mists')">
                 <img src="graphics/icons/trackMists.png" />
                 The Mists
             </div>
             <div class="menuButton" onclick="showMenu('racer')">&lt;- BACK</div>
-
         </div>
     </div>
 

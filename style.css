@@ -292,4 +292,12 @@ canvas {
         text-align: center;
     }
 
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
+}
+
 /*#endregion*/

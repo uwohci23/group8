@@ -46,6 +46,8 @@ var backgroundColors = {
     "title": "#000000",
     "main": "#a02700",
     "racer": "#006900",
+    "tutor": "#006900",
+    "HTP": "#000000",
     "track": "#00516b",
     "about": "#111111",
     "settings": "#111111"
@@ -70,6 +72,11 @@ function showMenu(section) {
 function setRacer(newRacer) {
     racer = newRacer;
     showMenu('track');
+}
+
+function tutorM() {
+    racer = 'kartA';
+    loadMap('inquest');
 }
 
 // Bind touch events to onscreen controls
