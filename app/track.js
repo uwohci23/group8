@@ -120,8 +120,9 @@
   };
 
   //Main class
-  this.Track = function () {
-    hardC();
+    this.Track = function () {
+        this.hardT = hardT;
+        hardC();
     try {
       ga("send", "event", "Race", trackName + "_" + racer);
     } catch (e) {
@@ -143,7 +144,7 @@
 
     // Load all assets and track defaults
     this.TrackName = trackName;
-    this.hardT = hardT;
+    
 
     setupScene();
     loadAssets();
