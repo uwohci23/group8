@@ -216,162 +216,177 @@
     </div>
 
     <div id="UI">
-      <div id="pauseButton" onclick="javascript:pause()">
-        <img src="graphics/pause.png" />
-      </div>
-      <div id="timerTop">
-        <span> Time left: </span>
-        <span id="timeCurrent">0.00</span>
-      </div>
-      <div id="timerBottom">
-        <span id="currentLap">0000</span> laps remaining
-      </div>
-      <span id="timeBest">0000</span>
-      <span id="timeLast">0000</span>
+        <div id="pauseButton" onclick="javascript:pause()">
+            <img src="graphics/pause.png" />
+        </div>
+        <div id="timerTop">
+            <span> Time left: </span>
+            <span id="timeCurrent">0.00</span>
+        </div>
+        <div id="timerBottom">
+            <span id="currentLap">0000</span> laps remaining
+        </div>
+        <span id="timeBest">0000</span>
+        <span id="timeLast">0000</span>
+        <div id="tutorBottom">
+            <span class="blue">TUTORIAL MODE</span> 
+        </div>
 
-      <div id="dragGroup" onclick="javascript:blank()">
-        <div id="wheel">
-          <img src="graphics/operate/wheel.png" />
+        <div id="dragGroup" onclick="javascript:blank()">
+            <div id="wheel">
+                <img src="graphics/operate/wheel.png" />
+            </div>
+            <div id="dragBlock">
+                <img src="graphics/operate/drag.png" />
+            </div>
         </div>
-        <div id="dragBlock">
-          <img src="graphics/operate/drag.png" />
-        </div>
-      </div>
 
-      <img id="speedometer" src="graphics/operate/speedometer.png" />
-      <img id="pointer" src="graphics/operate/cold.png" />
-      <div id="speed">0</div>
+        <img id="speedometer" src="graphics/operate/speedometer.png" />
+        <img id="pointer" src="graphics/operate/cold.png" />
+        <div id="speed">0</div>
 
-      <div id="empty_nitro">
-        <img src="graphics/operate/empty_nitro.png" />
-      </div>
-      <div id="full_nitro">
-        <img src="graphics/operate/full_nitro.png" />
-      </div>
+        <div id="empty_nitro">
+            <img src="graphics/operate/empty_nitro.png" />
+        </div>
+        <div id="full_nitro">
+            <img src="graphics/operate/full_nitro.png" />
+        </div>
 
-      <div id="gameMenu">
-        <div class="gameMenuPopup">
-          <h2>PAUSED</h2>
-          <div class="menuButton" onclick="javascript:unpause()" id="resume">
-            <img src="graphics/icons/kart.png" />
-              RESUME RACING
-          </div>
-          <div class="menuButton" onclick="javascript:toggleVolume()">
-            <img src="graphics/icons/sound.png" />
-            <span id="volume_2">SOUNDS (all)</span>
-          </div>
-          <div class="menuButton" onclick="javascript:toggleFullscreen()">
-            <img src="graphics/icons/fullscreen.png" />
-            TOGGLE FULLSCREEN
-          </div>
-          <div class="menuButton" onclick="javascript:unloadTrack()">
-            &lt;- BACK
-          </div>
+        <div id="gameMenu">
+            <div class="gameMenuPopup">
+                <h2>PAUSED</h2>
+                <div class="menuButton" onclick="javascript:unpause()" id="resume">
+                    <img src="graphics/icons/kart.png" />
+                    RESUME RACING
+                </div>
+                <div class="menuButton" onclick="javascript:toggleVolume()">
+                    <img src="graphics/icons/sound.png" />
+                    <span id="volume_2">SOUNDS (all)</span>
+                </div>
+                <div class="menuButton" onclick="javascript:toggleFullscreen()">
+                    <img src="graphics/icons/fullscreen.png" />
+                    TOGGLE FULLSCREEN
+                </div>
+                <div class="menuButton" onclick="javascript: really()">
+                    &lt;- BACK
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div id="gameFail">
-        <div class="gameFailPopup">
-          <h2>TIME UP! YOU FAILED THE GAME!</h2>
-          <div class="menuButton" onclick="javascript:retry()">
-            &lt;- RETRY THE GAME
-          </div>
-          <div class="menuButton" onclick="javascript:unloadTrack()">
-            &lt;- BACK
-          </div>
+        <div id="gameFail">
+            <div class="gameFailPopup">
+                <h2>TIME UP! YOU FAILED THE GAME!</h2>
+                <div class="menuButton" onclick="javascript:retry()">
+                    &lt;- RETRY THE GAME
+                </div>
+                <div class="menuButton" onclick="javascript:unloadTrack()">
+                    &lt;- BACK
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div id="gameSucess">
-        <div class="gameFailPopup">
-          <h2 style="color: yellow">SUCESS: You Won the Game!</h2>
-          <div class="menuButton" onclick="javascript:retry()">
-            &lt;- RETRY THE GAME
-          </div>
-          <div class="menuButton" onclick="javascript:unloadTrack()">
-            &lt;- BACK
-          </div>
+        <div id="gameSucess">
+            <div class="gameFailPopup">
+                <h2 style="color: yellow">SUCESS: You Won the Game!</h2>
+                <div class="menuButton" onclick="javascript:retry()">
+                    &lt;- RETRY THE GAME
+                </div>
+                <div class="menuButton" onclick="javascript:unloadTrack()">
+                    &lt;- BACK
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div id="tutorMenuS">
-        <div class="gameMenuPopup">
-          <h2>PROMPT</h2>
-          <p>
-            <span class="yellow"> Yellow blocks </span> give you a boost! speed
-            UP!!
-          </p>
-          <div class="menuButton" onclick="javascript:unpause()" id="resume">
-            &gt; OK
-          </div>
+        <div id="really">
+            <div class="gameFailPopup">
+                <h2 style="color: yellow">SUCESS: Do you really want to leave?</h2>
+                <div class="menuButton" onclick="javascript:unloadTrack()">
+                    &lt;- YES
+                </div>
+                <div class="menuButton" onclick="javascript:unpause()" id="resume">
+                    &lt; -NO
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div id="tutorMenuS2">
-        <div class="gameMenuPopup">
-          <h2>PROMPT</h2>
-          <p>Be careful not to step out of bounds!</p>
-          <div class="menuButton" onclick="javascript:unpause()" id="resume">
-            &gt; OK
-          </div>
+        <div id="tutorMenuS">
+            <div class="gameMenuPopup">
+                <h2>PROMPT</h2>
+                <p>
+                    <span class="yellow"> Yellow blocks </span> give you a boost! speed
+                    UP!!
+                </p>
+                <div class="menuButton" onclick="javascript:unpause()" id="resume">
+                    &gt; OK
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div id="tutorMenuS3">
-        <div class="gameMenuPopup">
-          <h2>PROMPT</h2>
-          <p>Mud will speed you down try to not enter</p>
-          <div class="menuButton" onclick="javascript:unpause()" id="resume">
-            &gt; OK
-          </div>
+        <div id="tutorMenuS2">
+            <div class="gameMenuPopup">
+                <h2>PROMPT</h2>
+                <p>Be careful not to step out of bounds!</p>
+                <div class="menuButton" onclick="javascript:unpause()" id="resume">
+                    &gt; OK
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div id="tutorMenuS4">
-        <div class="gameMenuPopup">
-          <h2>PROMPT</h2>
-          <p>You finish tutorial! now is time to racing!!</p>
-          <div class="menuButton" onclick="javascript:unloadTrack()">
-            &gt; OK
-          </div>
+        <div id="tutorMenuS3">
+            <div class="gameMenuPopup">
+                <h2>PROMPT</h2>
+                <p>Mud will speed you down try to not enter</p>
+                <div class="menuButton" onclick="javascript:unpause()" id="resume">
+                    &gt; OK
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div id="tutorMenuS5">
-        <div class="gameMenuPopup">
-          <h2>PROMPT</h2>
-          <p>this is a nitrogen press Space bar or Press the left and right mouse buttons together to use it! you can keep 2 of them </p>
-          <div class="menuButton" onclick="javascript:unpause()" id="resume">
-              &gt; OK
-          </div>
+        <div id="tutorMenuS4">
+            <div class="gameMenuPopup">
+                <h2>PROMPT</h2>
+                <p>You finish tutorial! now is time to racing!!</p>
+                <div class="menuButton" onclick="javascript:unloadTrack()">
+                    &gt; OK
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div id="tutorMenuS6">
-        <div class="gameMenuPopup">
-          <h2>PROMPT</h2>
-          <p>You failed! try again!!!</p>
-          <div class="menuButton" onclick="javascript:unloadTrack()">
-            &gt; Try again
-          </div>
+        <div id="tutorMenuS5">
+            <div class="gameMenuPopup">
+                <h2>PROMPT</h2>
+                <p>this is a nitrogen press Space bar or Press the left and right mouse buttons together to use it! you can keep 2 of them </p>
+                <div class="menuButton" onclick="javascript:unpause()" id="resume">
+                    &gt; OK
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div id="touch">
-        <div id="left" class="touchButton">
-          <img src="graphics/left.png" />
+        <div id="tutorMenuS6">
+            <div class="gameMenuPopup">
+                <h2>PROMPT</h2>
+                <p>You failed! try again!!!</p>
+                <div class="menuButton" onclick="javascript:unloadTrack()">
+                    &gt; Try again
+                </div>
+            </div>
         </div>
-        <div id="right" class="touchButton">
-          <img src="graphics/right.png" />
+
+        <div id="touch">
+            <div id="left" class="touchButton">
+                <img src="graphics/left.png" />
+            </div>
+            <div id="right" class="touchButton">
+                <img src="graphics/right.png" />
+            </div>
+            <div id="aButton" class="touchButton">
+                <img src="graphics/aButton.png" />
+            </div>
+            <div id="bButton" class="touchButton">
+                <img src="graphics/bButton.png" />
+            </div>
         </div>
-        <div id="aButton" class="touchButton">
-          <img src="graphics/aButton.png" />
-        </div>
-        <div id="bButton" class="touchButton">
-          <img src="graphics/bButton.png" />
-        </div>
-      </div>
-      <div id="loading">[LOADING]</div>
+        <div id="loading">[LOADING]</div>
     </div>
 
     <!-- required includes -->

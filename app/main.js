@@ -45,7 +45,8 @@ function loadMap(hardT) {
   current_difficulty = hardT;
 
   unloadTrack();
-  document.getElementById("mainMenu").style.display = "none";
+    document.getElementById("mainMenu").style.display = "none";
+    document.getElementById("tutorBottom").style.opacity = 0;
   track = new Track(maplist[mapno], hardT);
   //track.hardT = hardT;
 }
@@ -62,7 +63,10 @@ function unloadTrack() {
   document.getElementById("tutorMenuS6").style.display = "none";
   document.getElementById("mainMenu").style.display = "block";
 
-  document.getElementById("gameFail").style.display = "none";
+    document.getElementById("gameFail").style.display = "none";
+    document.getElementById("gameSucess").style.display = "none";
+    document.getElementById("really").style.display = "none";
+
 
   if (track !== null) {
     track.dispose();
@@ -98,6 +102,13 @@ function success() {
   track.state = "pause";
   document.getElementById("gameMenu").style.display = "none";
   document.getElementById("gameSucess").style.display = "flex";
+}
+
+function really() {
+    sfx.click.play();
+    track.state = "pause";
+    document.getElementById("gameMenu").style.display = "none";
+    document.getElementById("really").style.display = "flex";
 }
 
 // if user choose to retry the game => reload the map
@@ -157,7 +168,10 @@ function unpause() {
   document.getElementById("tutorMenuS3").style.display = "none";
   document.getElementById("tutorMenuS4").style.display = "none";
   document.getElementById("tutorMenuS5").style.display = "none";
-  document.getElementById("tutorMenuS6").style.display = "none";
+    document.getElementById("tutorMenuS6").style.display = "none";
+    document.getElementById("gameSucess").style.display = "none";
+    document.getElementById("really").style.display = "none";
+
 }
 
 // Background colors for each menu
@@ -232,10 +246,12 @@ function kartPic() {
 function tutorM() {
   racer = "kartA";
   unloadTrack();
-  document.getElementById("mainMenu").style.display = "none";
+    document.getElementById("mainMenu").style.display = "none";
+    document.getElementById("tutorBottom").style.opacity = 100;
   track = new Track("inquest", 4);
   track.tutorS = true;
 }
+
 
 // Bind touch events to onscreen controls
 document.getElementById("left").addEventListener(
