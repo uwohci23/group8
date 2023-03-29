@@ -1,4 +1,4 @@
-var Track = function (trackName, hardT) {
+﻿var Track = function (trackName, hardT) {
   var self = this;
   var flag = false;
   var brake = false;
@@ -507,7 +507,7 @@ var Track = function (trackName, hardT) {
 
           // Current lap count   ( fixed to 9999 max for nostalgia purpose )
           document.getElementById("currentLap").innerText = (
-            "0000" + lap.count
+            "0000" + Math.floor(round - lap.count)
           ).slice(-4);
 
           // Update last / best time
@@ -619,7 +619,7 @@ var Track = function (trackName, hardT) {
     }
     if (self.hardT == 3) {
       timelim = 120.0;
-      round = 3;
+      round = 4;
     }
   }
 
