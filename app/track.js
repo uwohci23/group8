@@ -310,7 +310,8 @@
           nitro_count = true;
           if (nitro_count == true) {
             document.getElementById("empty_nitro").style.opacity = "0.0";
-            document.getElementById("full_nitro").style.opacity = "1.0";
+              document.getElementById("full_nitro").style.opacity = "1.0";
+              document.getElementById("prompt_nitro").style.opacity = 100;
           }
         }
 
@@ -320,7 +321,8 @@
           player.speed = limits.maxSpeed + limits.maxBoost * 2;
           if (nitro_count == false) {
             document.getElementById("empty_nitro").style.opacity = "1.0";
-            document.getElementById("full_nitro").style.opacity = "0.0";
+              document.getElementById("full_nitro").style.opacity = "0.0";
+              document.getElementById("prompt_nitro").style.opacity = 0;
           }
         }
 

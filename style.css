@@ -344,6 +344,10 @@ canvas {
     color: cornflowerblue;
 }
 
+.purple {
+    color: mediumpurple;
+}
+
 
 /*#endregion*/
 #wheel > img {
@@ -491,5 +495,15 @@ canvas {
     font-size: 4vmin;
     bottom: 5vmin;
     left: 45%;
+    opacity: 0;
+}
+
+#prompt_nitro {
+    text-align: right;
+    position: absolute;
+    z-index: 101;
+    font-size: 4vmin;
+    top: 5vmin;
+    left: 40%;
     opacity: 0;
 }
