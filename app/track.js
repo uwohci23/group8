@@ -1,4 +1,4 @@
-var Track = function (trackName, hardT) {
+﻿var Track = function (trackName, hardT) {
   var self = this;
   var flag = false;
   var brake = false;
@@ -120,8 +120,9 @@ var Track = function (trackName, hardT) {
   };
 
   //Main class
-  this.Track = function () {
-    hardC();
+    this.Track = function () {
+        this.hardT = hardT;
+        hardC();
     try {
       ga("send", "event", "Race", trackName + "_" + racer);
     } catch (e) {
@@ -143,7 +144,7 @@ var Track = function (trackName, hardT) {
 
     // Load all assets and track defaults
     this.TrackName = trackName;
-    this.hardT = hardT;
+    
 
     setupScene();
     loadAssets();
@@ -482,10 +483,10 @@ var Track = function (trackName, hardT) {
         ) {
           // Reset lap counters
           lap.checkpoint = false;
-          lap.times[1] = lap.times[0];
-          lap.times[0] = 0;
-          if (lap.times[1] < lap.times[2] || lap.times[2] == 0)
-            lap.times[2] = lap.times[1];
+          //lap.times[1] = lap.times[0];
+          //lap.times[0] = 0;
+          //if (lap.times[1] < lap.times[2] || lap.times[2] == 0)
+           // lap.times[2] = lap.times[1];
 
           //Increase lap count
           lap.count++;
@@ -507,7 +508,7 @@ var Track = function (trackName, hardT) {
 
           // Current lap count   ( fixed to 9999 max for nostalgia purpose )
           document.getElementById("currentLap").innerText = (
-            "0000" + lap.count
+            "0000" + Math.floor(round - lap.count)
           ).slice(-4);
 
           // Update last / best time
@@ -619,7 +620,7 @@ var Track = function (trackName, hardT) {
     }
     if (self.hardT == 3) {
       timelim = 120.0;
-      round = 3;
+      round = 4;
     }
   }
 
