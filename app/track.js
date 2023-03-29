@@ -7,7 +7,8 @@
     yellow: false,
     speedDown: false,
     board: false,
-    finish: false,
+      finish: false,
+    nitro:false,
   };
 
   // Public variables
@@ -302,7 +303,11 @@
 
         // nitro has been hit
         if (current.tile.index == 6 && nitro_count == false) {
-          sfx.collect.play();
+            sfx.collect.play();
+            if (self.tutorS == true && tutorTList.nitro== false) {
+                tpause5();
+                tutorTList.nitro= true;
+            }
           nitro_count = true;
           if (nitro_count == true) {
             document.getElementById("empty_nitro").style.opacity = "0.0";
