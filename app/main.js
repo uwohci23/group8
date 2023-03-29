@@ -93,6 +93,13 @@ function fail() {
   document.getElementById("gameFail").style.display = "flex";
 }
 
+function success() {
+  sfx.click.play();
+  track.state = "pause";
+  document.getElementById("gameMenu").style.display = "none";
+  document.getElementById("gameSucess").style.display = "flex";
+}
+
 // if user choose to retry the game => reload the map
 function retry() {
   if (current_map != null) {

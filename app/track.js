@@ -120,9 +120,9 @@
   };
 
   //Main class
-    this.Track = function () {
-        this.hardT = hardT;
-        hardC();
+  this.Track = function () {
+    this.hardT = hardT;
+    hardC();
     try {
       ga("send", "event", "Race", trackName + "_" + racer);
     } catch (e) {
@@ -144,7 +144,6 @@
 
     // Load all assets and track defaults
     this.TrackName = trackName;
-    
 
     setupScene();
     loadAssets();
@@ -486,7 +485,7 @@
           //lap.times[1] = lap.times[0];
           //lap.times[0] = 0;
           //if (lap.times[1] < lap.times[2] || lap.times[2] == 0)
-           // lap.times[2] = lap.times[1];
+          // lap.times[2] = lap.times[1];
 
           //Increase lap count
           lap.count++;
@@ -503,7 +502,7 @@
             (timelim - lap.times[0] / 1000).toFixed(2) >= 0
           ) {
             // 应该替换成 success();
-            fail();
+            success();
           }
 
           // Current lap count   ( fixed to 9999 max for nostalgia purpose )
