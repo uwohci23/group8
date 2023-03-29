@@ -309,6 +309,27 @@ canvas {
   color: #767676;
 }
 
+#tutorMenuS,
+#tutorMenuS2,
+#tutorMenuS3,
+#tutorMenuS4,
+#tutorMenuS5,
+#tutorMenuS6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.9);
+  display: block;
+  z-index: 9000;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vmin;
+  display: none;
+  color: #767676;
+}
+
 .green {
   color: green;
 }
