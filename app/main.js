@@ -233,7 +233,7 @@ function tutorM() {
   racer = "kartA";
   unloadTrack();
   document.getElementById("mainMenu").style.display = "none";
-  track = new Track("inquest", 1);
+  track = new Track("inquest", 4);
   track.tutorS = true;
 }
 

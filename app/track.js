@@ -625,7 +625,11 @@
     if (self.hardT == 3) {
       timelim = 120.0;
       round = 4;
-    }
+      }
+     if (self.hardT == 4) {
+          timelim = 10000.0;
+          round = 1;
+     }
   }
 
   function setupScene() {
