@@ -293,7 +293,8 @@ canvas {
   text-align: center;
 }
 
-#gameFail {
+#gameFail,
+#gameSucess {
   position: absolute;
   width: 100%;
   height: 100%;
