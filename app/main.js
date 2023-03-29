@@ -1,26 +1,69 @@
-﻿// three.js instance
+﻿//import { changeTS } from './track.js';
+
+// three.js instance
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 // Selected track and racer
 var track = null;
-var racer = "kartB";
+var racer = "kartA";
+var maplist = ["ascalon", "kryta", "mists", "shiverpeak", "southsun"];
+var mapno = 0;
+
+var current_map = null;
+var current_difficulty = null;
 
 var mainMenu = document.getElementById("mainMenu");
 
+// Set selected racer
+function setMapUP() {
+  mapno--;
+  if (mapno < 0) {
+    mapno = maplist.length - 1;
+  }
+  document.getElementById("mapimg").src =
+    "tracks/" + maplist[mapno] + "/map.png";
+  document.getElementById("mapInfor").src =
+    "tracks/" + maplist[mapno] + "/infor.png";
+}
+
+function setMapDOWN() {
+  mapno++;
+  if (mapno > maplist.length - 1) {
+    mapno = 0;
+  }
+  document.getElementById("mapimg").src =
+    "tracks/" + maplist[mapno] + "/map.png";
+  document.getElementById("mapInfor").src =
+    "tracks/" + maplist[mapno] + "/infor.png";
+}
+
 // Load a new track and hide the main menu
-function loadMap(map) {
+function loadMap(hardT) {
+  current_map = maplist[mapno];
+  current_difficulty = hardT;
+
   unloadTrack();
   document.getElementById("mainMenu").style.display = "none";
-  track = new Track(map);
+  track = new Track(maplist[mapno], hardT);
+  //track.hardT = hardT;
 }
 
 // Dispose track and return to menu
 function unloadTrack() {
   sfx.click.play();
   document.getElementById("gameMenu").style.display = "none";
+  document.getElementById("tutorMenuS").style.display = "none";
+  document.getElementById("tutorMenuS2").style.display = "none";
+  document.getElementById("tutorMenuS3").style.display = "none";
+  document.getElementById("tutorMenuS4").style.display = "none";
+  document.getElementById("tutorMenuS5").style.display = "none";
+  document.getElementById("tutorMenuS6").style.display = "none";
   document.getElementById("mainMenu").style.display = "block";
+
+  document.getElementById("gameFail").style.display = "none";
+
   if (track !== null) {
     track.dispose();
     track = null;
@@ -42,11 +85,72 @@ function pause() {
   document.getElementById("gameMenu").style.display = "flex";
 }
 
+// If user fails the game, display the fail page
+function fail() {
+  sfx.click.play();
+  track.state = "pause";
+  document.getElementById("gameMenu").style.display = "none";
+  document.getElementById("gameFail").style.display = "flex";
+}
+
+// if user choose to retry the game => reload the map
+function retry() {
+  if (current_map != null) {
+    loadMap(current_map);
+  }
+}
+
+// tutor pause1 speed up
+function tpause() {
+  sfx.click.play();
+  track.state = "paused";
+  document.getElementById("tutorMenuS").style.display = "flex";
+}
+
+//tutor pause2 board
+function tpause2() {
+  sfx.click.play();
+  track.state = "paused";
+  document.getElementById("tutorMenuS2").style.display = "flex";
+}
+
+//tutor pause3 speed down
+function tpause3() {
+  sfx.click.play();
+  track.state = "paused";
+  document.getElementById("tutorMenuS3").style.display = "flex";
+}
+
+//tutor pause4 finish
+function tpause4() {
+  sfx.click.play();
+  track.state = "paused";
+  document.getElementById("tutorMenuS4").style.display = "flex";
+}
+
+function tpause5() {
+  sfx.click.play();
+  track.state = "paused";
+  document.getElementById("tutorMenuS5").style.display = "flex";
+}
+
+function tpause6() {
+  sfx.click.play();
+  track.state = "paused";
+  document.getElementById("tutorMenuS6").style.display = "flex";
+}
+
 // Resume game from menu or button
 function unpause() {
   sfx.click.play();
   track.state = "running";
   document.getElementById("gameMenu").style.display = "none";
+  document.getElementById("tutorMenuS").style.display = "none";
+  document.getElementById("tutorMenuS2").style.display = "none";
+  document.getElementById("tutorMenuS3").style.display = "none";
+  document.getElementById("tutorMenuS4").style.display = "none";
+  document.getElementById("tutorMenuS5").style.display = "none";
+  document.getElementById("tutorMenuS6").style.display = "none";
 }
 
 // Background colors for each menu
@@ -59,6 +163,7 @@ var backgroundColors = {
   track: "#00516b",
   about: "#111111",
   settings: "#111111",
+  hard: "#32CD99",
 };
 
 // Switch between menus
@@ -76,14 +181,53 @@ function showMenu(section) {
 }
 
 // Set selected racer
-function setRacer(newRacer) {
-  racer = newRacer;
-  showMenu("track");
+function setRacerUP() {
+  if (racer == "kartA") {
+    racer = "kartC";
+    document.getElementById("carimg").src = "graphics/racers/carC.png";
+    document.getElementById("carInfor").src = "graphics/UICC.png";
+  } else if (racer == "kartB") {
+    racer = "kartA";
+    document.getElementById("carimg").src = "graphics/racers/carA.png";
+    document.getElementById("carInfor").src = "graphics/UICA.png";
+  } else {
+    racer = "kartB";
+    document.getElementById("carimg").src = "graphics/racers/carB.png";
+    document.getElementById("carInfor").src = "graphics/UICB.png";
+  }
 }
 
+function setRacerDOWN() {
+  if (racer == "kartA") {
+    racer = "kartB";
+    document.getElementById("carimg").src = "graphics/racers/carB.png";
+    document.getElementById("carInfor").src = "graphics/UICB.png";
+  } else if (racer == "kartB") {
+    racer = "kartC";
+    document.getElementById("carimg").src = "graphics/racers/carC.png";
+    document.getElementById("carInfor").src = "graphics/UICC.png";
+  } else {
+    racer = "kartA";
+    document.getElementById("carimg").src = "graphics/racers/carA.png";
+    document.getElementById("carInfor").src = "graphics/UICA.png";
+  }
+}
+
+function kartPic() {
+  if (racer == "kartA") {
+    return "graphics/racers/carA.png";
+  } else if (racer == "kartB") {
+    return "graphics/racers/carB.png";
+  } else {
+    return "graphics/racers/carC.png";
+  }
+}
 function tutorM() {
   racer = "kartA";
-  loadMap("inquest");
+  unloadTrack();
+  document.getElementById("mainMenu").style.display = "none";
+  track = new Track("inquest", 1);
+  track.tutorS = true;
 }
 
 // Bind touch events to onscreen controls

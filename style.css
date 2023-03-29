@@ -1,4 +1,4 @@
-﻿html {
+html {
   /*HACK get rid of iOS Safari document wobble... why is this even a thing ?! */
   -webkit-user-select: none;
   -webkit-touch-callout: none;
@@ -189,6 +189,7 @@ canvas {
   text-align: right;
   position: absolute;
   z-index: 101;
+  font-size: 4vmin;
   top: 2vmin;
   right: 2vmin;
 }
@@ -197,7 +198,7 @@ canvas {
   text-align: right;
   position: absolute;
   z-index: 102;
-  bottom: 2vmin;
+  top: 10vmin;
   right: 2vmin;
   font-size: 3.5vmin;
   opacity: 0.5;
@@ -282,6 +283,22 @@ canvas {
   text-align: center;
 }
 
+#gameFail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.9);
+  display: block;
+  z-index: 9000;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vmin;
+  display: none;
+  color: #767676;
+}
+
 .green {
   color: green;
 }
@@ -305,6 +322,125 @@ canvas {
   width: 20%;
   height: 35%;
   opacity: 1;
-  left: 5%;ç
+  left: 5%;
   top: 45%;
+}
+
+#empty_nitro > img {
+  position: absolute;
+  left: 3%;
+  top: 0%;
+  z-index: 3;
+  opacity: 1;
+}
+
+#full_nitro > img {
+  position: absolute;
+  left: 3%;
+  top: 0%;
+  z-index: -1;
+  opacity: 1;
+}
+
+#pointer {
+  position: absolute;
+  top: 570px;
+  right: 2px;
+  width: 20%;
+  height: 24%;
+}
+
+#speedometer {
+  position: absolute;
+  top: 500px;
+  right: 2px;
+  width: 20%;
+  height: 40%;
+}
+
+#speed {
+  position: absolute;
+  top: 730px;
+  right: 35px;
+  width: 11.5%;
+  height: 10%;
+  font-family: "VT323";
+  font-size: 100px;
+}
+
+.selectmenu {
+  width: 40%;
+  padding: 0px;
+  padding-left: 4px;
+  min-height: 7vmin;
+  font-size: 6vmin;
+  vertical-align: middle;
+  cursor: pointer;
+  float: left;
+}
+.selectmenu2 {
+  width: calc(100%-40%);
+  padding: 0px;
+  padding-left: 4px;
+  min-height: 7vmin;
+  font-size: 6vmin;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-left: 40%;
+}
+
+.SelectmenuButton {
+  width: calc(100% - 2px);
+  padding: 0px;
+  padding-left: 4px;
+  min-height: 7vmin;
+  font-size: 6vmin;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.SelectmenuButton img {
+  height: 50px;
+  width: 100px;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.pict {
+  width: calc(100% - 2px);
+  padding: 0px;
+  padding-left: 4px;
+  min-height: 7vmin;
+  font-size: 6vmin;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.pict img {
+  height: 200px;
+  width: 200px;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.pict2 {
+  width: calc(100% - 2px);
+  padding: 0px;
+  padding-left: 4px;
+  min-height: 7vmin;
+  font-size: 6vmin;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.pict2 img {
+  height: 300px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }

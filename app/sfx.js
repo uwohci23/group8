@@ -1,9 +1,10 @@
-﻿// Load sound effects to object
+// Load sound effects to object
 var sfx = {
     "lap": new Howl({ src: ['sounds/lap.mp3'] }),
     "bump": new Howl({ src: ['sounds/bump.mp3'] }),
     "click": new Howl({ src: ['sounds/click.mp3'] }),
     "woosh": new Howl({ src: ['sounds/woosh.mp3'] }),
+	"collect": new Howl({ src: ['sounds/collect.mp3'] }),
     "skidd": new Howl({ src: ['sounds/skidd.mp3'], loop: true }),
     "engine": new Howl({ src: ['sounds/engine.mp3'], loop: true, rate: 1 })
 }
