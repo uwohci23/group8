@@ -482,10 +482,10 @@
         ) {
           // Reset lap counters
           lap.checkpoint = false;
-          lap.times[1] = lap.times[0];
-          lap.times[0] = 0;
-          if (lap.times[1] < lap.times[2] || lap.times[2] == 0)
-            lap.times[2] = lap.times[1];
+          //lap.times[1] = lap.times[0];
+          //lap.times[0] = 0;
+          //if (lap.times[1] < lap.times[2] || lap.times[2] == 0)
+           // lap.times[2] = lap.times[1];
 
           //Increase lap count
           lap.count++;
