@@ -1,4 +1,4 @@
-html {
+﻿html {
   /*HACK get rid of iOS Safari document wobble... why is this even a thing ?! */
   -webkit-user-select: none;
   -webkit-touch-callout: none;
@@ -207,6 +207,10 @@ canvas {
 #timeCurrent {
   font-size: 7vmin;
   color: #fae053;
+}
+
+#timeBest {
+  opacity: 0;
 }
 
 #touch {
