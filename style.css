@@ -1,4 +1,4 @@
-﻿html {
+html {
   /*HACK get rid of iOS Safari document wobble... why is this even a thing ?! */
   -webkit-user-select: none;
   -webkit-touch-callout: none;
@@ -351,21 +351,21 @@ canvas {
 
 /*#endregion*/
 #wheel > img {
-  width: 20%;
-  height: 35%;
+  width: 25%;
+  height: 48%;
   opacity: 1;
   position: absolute;
   left: 5%;
-  top: 60%;
+  top: 45%;
 }
 
 #dragBlock > img {
-  position: absolute;
-  width: 20%;
-  height: 35%;
+  width: 200px;
+  height: 200px;
   opacity: 1;
-  left: 5%;
-  top: 45%;
+  position: absolute;
+  left: 12%;
+  top: 42%;
 }
 
 #empty_nitro > img {
@@ -393,11 +393,11 @@ canvas {
 }
 
 #speedometer {
-  position: absolute;
-  top: 500px;
-  right: 2px;
-  width: 20%;
-  height: 40%;
+	position: absolute;
+	top: 500px;
+	right: 2px;
+	width:20%;
+	height:40%;
 }
 
 #speed {

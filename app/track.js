@@ -1,4 +1,4 @@
-﻿var Track = function (trackName, hardT) {
+var Track = function (trackName, hardT) {
   var self = this;
   var flag = false;
   var brake = false;
