@@ -1,4 +1,4 @@
-# group8
+# group8: A Car Racing Game
 
 #### The original game comes from https://github.com/thatshaman/CharrioKart
 
