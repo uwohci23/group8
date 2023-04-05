@@ -42,3 +42,12 @@
       - to run, first cd to our project direcotry that contains index.html: `http-server . -p 5500`
       - use " http://localhost:5500" to play the game
 
+# Enviroment Setup (Windows)
+
+1. Please visit this website: http://fenixwebserver.com/ 
+
+2. Click on "Download Now" to download FEMIX 2.0, which will be used to run the game. 
+   1. In Assets, choose fenix-windows-2.0.0.zip, extract the files in the zip. 
+   2. Run the executive "fenixsetup.exe" to install FENIX 2.0 as you like. 
+   3. Launch FENIX 2.0, in the top menu, select "Web Server", then "New" to create a new server; name the server as you like, set the directory as the location of the project folder "group8". Click on "Create" to finish creating. 
+   4. You will see a server jumping into the list. Click on the triangle icon on the right side to Start Server, and then click on the server name to open a webpage; then, in the webpage, click on the folder name to start the game. 
