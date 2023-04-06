@@ -311,7 +311,7 @@ var Track = function (trackName, hardT) {
           if (nitro_count == true) {
             document.getElementById("empty_nitro").style.opacity = "0.0";
               document.getElementById("full_nitro").style.opacity = "1.0";
-              document.getElementById("prompt_nitro").style.opacity = 100;
+              document.getElementById("prompt_nitro").style.opacity ="1.0";
           }
         }
 
@@ -322,7 +322,7 @@ var Track = function (trackName, hardT) {
           if (nitro_count == false) {
             document.getElementById("empty_nitro").style.opacity = "1.0";
               document.getElementById("full_nitro").style.opacity = "0.0";
-              document.getElementById("prompt_nitro").style.opacity = 0;
+              document.getElementById("prompt_nitro").style.opacity = "0.0";
           }
         }
 

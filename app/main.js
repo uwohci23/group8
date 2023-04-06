@@ -47,6 +47,9 @@ function loadMap(hardT) {
   unloadTrack();
     document.getElementById("mainMenu").style.display = "none";
     document.getElementById("tutorBottom").style.opacity = 0;
+    document.getElementById("empty_nitro").style.opacity = "1.0";
+    document.getElementById("full_nitro").style.opacity = "0.0";
+    document.getElementById("prompt_nitro").style.opacity = "0.0";
   track = new Track(maplist[mapno], hardT);
   //track.hardT = hardT;
 }
