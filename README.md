@@ -2,7 +2,13 @@
 
 #### The original game comes from https://github.com/thatshaman/CharrioKart
 
-# Enviroment Setup (For Centos Linux)
+# Online Version (Deployed on AWS Amplify)
+
+visit: https://dev593.d3t2m33h5u8s96.amplifyapp.com/
+
+Please play it using computer to gain the best playing experience. 
+
+# Local Version - Enviroment Setup (For Centos Linux)
 
 #### Part I: Install Node.js Env (more see https://nodejs.org/en/download/package-manager)
 
@@ -42,7 +48,7 @@
       - to run, first cd to our project direcotry that contains index.html: `http-server . -p 5500`
       - use " http://localhost:5500" to play the game
 
-# Enviroment Setup (Windows)
+# Local Version - Enviroment Setup (Windows)
 
 1. Please visit this website: http://fenixwebserver.com/ 
 
