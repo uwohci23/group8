@@ -2,9 +2,13 @@
 
 #### The original game comes from https://github.com/thatshaman/CharrioKart
 
+# Re-Design Document
+
+#### Please visit: https://master.d2tlh3ii86paek.amplifyapp.com/#github
+
 # Online Version (Deployed on AWS Amplify)
 
-visit: https://dev593.d3t2m33h5u8s96.amplifyapp.com/
+#### Please visit: https://dev593.d3t2m33h5u8s96.amplifyapp.com/
 
 Please play it using computer to gain the best playing experience. 
 
